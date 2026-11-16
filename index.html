@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/main.js"></script>
 
     <title>Newsletter sign-up form</title>
 </head>
@@ -34,15 +35,14 @@
      
         <div class="form-container">
             <span class="title">Stay updated!</span>
-<!-- 24 -->
+
             <p class="description">Join 60,000+ product managers receiving monthly updates on:</p>
-<!-- 24 -->
+
             <ul class="list">
                 <li class="list-item">Product discovery and building what matters</li>
                 <li class="list-item">Measuring to ensure updates are a success</li>
                 <li class="list-item">And much more!</li>
             </ul>
-<!-- 40 -->
 
             <form class="form" id="signup-form" novalidate>
 
@@ -61,12 +61,7 @@
                             Valid email required
                     </span>
                 </label>
-                 
-                 <!-- 8 -->
-                 <!-- type email help mobile devices open keyboard -->
-                 <!-- name  defies key name sent to server/form handler  -->
-                 <!-- label for and input id must match -->
-                 
+                                  
                  <input 
                  class="form-input"
                  type="email"  
@@ -79,22 +74,17 @@
                  aria-describedby="email-error"
                  required 
                  />
-                 <!-- 24 -->
+                 
                 </div>
 
-                  <!-- <p id="email-error" class="error-message" role="alert" hidden>
-      <span aria-hidden="true">⚠</span> 
-      Please enter a valid email address, such as name@example.com.
-    </p> -->
+
 
                 <button class="form-button" type="submit">
                     Subscribe to monthly newsletter
-                    <!-- <span class="form-btn-label">Subscribe to monthly newsletter</span>     -->
                 </button>
 
             </form>
-        </div>
-  
+        </div>  
 
     </main>
 
