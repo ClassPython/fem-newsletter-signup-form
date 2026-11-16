@@ -1,0 +1,506 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+
+    /* 16px  */
+    font-size: 100%;
+
+    /* --- Body --- */
+    --font-size-body:1rem;
+    --line-height-body:1;
+
+    /*  --- font family    --- */
+     font-family: 'Roboto', sans-serif;
+
+/* Typography */
+/* ## Colors */
+
+/* ### Primary */
+
+--red: hsl(4, 100%, 67%);
+--light-red: hsla(4, 100%, 67%, 0.2);
+
+/* ### Neutral */
+
+--blue-800: hsl(234, 29%, 20%);
+--blue-700: hsl(235, 18%, 26%);
+--grey: hsl(0, 0%,58%);
+--white: hsl(0, 0%, 100%);
+
+/* Typography Section Gradient */
+
+--gradient: linear-gradient(90deg, #ff6a3a, #ff527b);
+
+
+
+/* Text Presets */
+/* Robo bold 56px  100%  0 letter spacing */
+/* Robo bold  40px 100% 0 letter spacing */
+/* Robo bold  16px 150% 0 letter spacing */
+/* Robo regular 16px 150%  0 letter spacing */
+/* Robo bold 12px 150%  0 letter spacing */
+
+
+/* font-size */
+--font-size-56:3.5rem;  /* bold*/
+--font-size-40:2.5rem;  /* bold*/
+--font-size-16:1rem;   /* bold or regular*/
+--font-size-12:.75rem;  /* bold*/
+
+/* font weights */
+--font-weight-bold:700; /* 56px, 40px, 16px, 12px */
+--font-weight-reg:400;  /* 16px */
+
+/* line height */
+--line-height-150:1.5;  /* 16px, 12px */
+--line-height-100:1;   /* 56px, 40px */
+
+/* letter spacing */
+--letter-spacing:0rem; /* all */
+
+
+
+/* Spacing */
+   /* --- Spacing --- */
+   --spacing-650:6.5rem;  /* 104px  6.5 */
+   --spacing-450:4.5rem;  /* 72px 4.5 */
+   --spacing-400:4rem;  /* 64px 4 */
+   --spacing-300:3rem;  /* 48px  3*/
+   --spacing-250:2.5rem; /* 40px 2.5 */
+   --spacing-200:2rem;  /* 32px 2 */
+   --spacing-150:1.5rem;/* 24px 1.5 */
+   --spacing-112:1.125rem; /* 18px  1.125 */
+   --spacing-100:1rem; /* 16px  1 */
+   --spacing-50:.5rem; /* 8px  .5 */
+
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.text-gradient {
+  /* Fallback solid color for older browsers */
+  color: #ff6a3a; 
+
+  /* 1. Define your gradient as a background */
+  background-image: var(--gradient);
+
+  /* 2. Clip the background to the text shape */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* 3. Make the actual text fill transparent so the background shows through */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  
+  /* Optional: Prevents the gradient from stretching across empty container space */
+  display: inline-block; 
+}
+
+body{
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* prevents a default body margin*/
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh; 
+    min-height: 100dvh; 
+    /* Optional: allows vertical centering across the whole screen */
+    background-color: var(--white);
+
+    row-gap: var(--spacing-250);
+}
+
+.hero-image{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    aspect-ratio:375/284;
+    width: 100%;
+}
+
+/* =============== */
+
+.image-container{
+    /* aspect-ratio:375/284; */
+    width: 100%;
+    /* width: 100%; */
+    /* height: 375px; */
+}
+
+.image{
+     aspect-ratio:375/284;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: var(--spacing-50);
+    border-top-right-radius: var(--spacing-50);
+}
+
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  /* display: block; */
+}
+
+/* ========================= */
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-left: var(--spacing-150);
+    padding-right: var(--spacing-150);
+
+    row-gap: var(--spacing-150);
+
+    margin-bottom: 44px;
+}
+
+.title{
+    font-size: var(--font-size-40);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-100);
+    letter-spacing: var(--letter-spacing);
+    color: var(--blue-800);
+    
+    width: 100%;
+    
+}
+
+.description{
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-reg);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing);
+    color: var(--blue-800);
+}
+
+.list {
+display: flex;
+flex-direction: column;
+/* justify-content: flex-start; */
+/* align-items: flex-start; */
+width: 100%;
+row-gap: var(--spacing-50);
+
+  list-style: none; /* Removes default bullets */
+  padding-left: 0;
+
+  margin-bottom: var(--spacing-100);
+}
+
+
+
+/* gap 16px */
+/* svg 21px x 21px */
+.list li {
+  position: relative;
+  /* padding-left: 1.75rem; Space for your icon + gap */
+  padding-left: 2.3125rem; /* Space for your icon (21px) + gap (16px) */
+  /* margin-bottom: 0.5rem; */
+}
+
+.list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em; /* Adjusts vertical alignment with the first line of text */
+  width: 1.3125rem;   /* Controls icon width */
+  height: 1.3125rem;  /* Controls icon height */
+  
+  /* Link to your SVG file */
+  background-image: url('../images/icon-list.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.list-item{
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-reg);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing);
+    color: var(--blue-800);
+}
+
+/* .form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    row-gap: var(--spacing-50);
+}
+
+.form-label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: var(--spacing-50);
+
+}
+
+.form-label-title{
+    /* 3 */
+    font-size: var(--font-size-12);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing);
+    color: var(--blue-800);
+
+    
+}
+
+.form-input{
+    padding: var(--spacing-100) var(--spacing-150);
+    border-radius: var(--spacing-50);
+    border: 1px solid var(--grey);
+    background-color: var(--white);
+    width: 100%;
+
+    /* input field */
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-reg);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing);
+    color: var(--blue-800);
+}
+
+.form-input::placeholder{
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-reg);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing);
+    color: var(--grey);
+
+    margin-bottom: var(--spacing-100);
+}
+
+.error-message{
+    display: none;
+    font-size: var(--font-size-12);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing);
+    color: var(--red);
+    /* margin-top: 4px; */
+}
+
+.field-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* custom error styles applied on submit */
+.field-group.has-error input{
+/* .form-input.has-error{ */
+    /* border-color: var(--red); */
+    border: 1px solid var(--red);
+    background-color: var(--light-red);
+}
+
+.field-group.has-error input::placeholder{
+/* .form-input.has-error::placeholder{ */
+    color: var(--red);
+    opacity: 1;
+}
+
+.field-group.has-error .error-message{
+/* .form-input.has-error .error-message{ */
+    display: block;
+}
+
+/* input:user-invalid, */
+/* input:user-invalid:focus { */
+/* input:user-invalid{
+  background-color: var(--light-red);
+  border: 1px solid var(--red);
+  outline: none;
+} */
+
+.form-input{
+    background-color: var(--white);
+}
+
+.form-input:focus{
+    background-color: var(--white);
+}
+
+.form-input:not(:placeholder-shown) {
+  background-color:var(--white);
+}
+
+/* ! ================= */
+/* High-visibility keyboard focus ring */
+/* input[type="email"]:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+  border-color: #005fcc;
+} */
+
+
+/* Error states: supports both native :user-invalid and JS-driven aria-invalid */
+/* input[type="email"]:user-invalid,
+input[type="email"][aria-invalid="true"] {
+  border-color: #b91c1c;
+  background-color: #fef2f2;
+} */
+
+/* .error-message {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #b91c1c;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+} */
+
+/* Ensure hidden attribute overrides flex display */
+.error-message[hidden] {
+  display: none;
+}
+
+
+/* ! ================= */
+
+/* ================== */
+
+/* 1. Customize the autofilled input field */
+input:autofill,
+input:autofill:hover,
+input:autofill:focus,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  /* Paint over the browser's default background using a large inset shadow */
+  /* -webkit-box-shadow: 0 0 0 1000px #1e293b inset !important; */
+  -webkit-box-shadow: 0 0 0 1000px var(--white) inset !important;
+  /* box-shadow: 0 0 0 1000px #1e293b inset !important; */
+  box-shadow: 0 0 0 1000px var(--white) inset !important;
+
+  /* Set the autofilled text and cursor colors */
+  -webkit-text-fill-color: black  !important;
+  caret-color: #f8fafc;
+
+  /* Prevent brief flashes of the default yellow/blue color */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* 2. Keep floating labels raised when the input is autofilled */
+/* input:autofill + label,
+input:-webkit-autofill + label {
+  transform: translateY(-1.5rem) scale(0.85);
+  color: #38bdf8;
+  color: var(--blue-800);
+} */
+/* input:focus, */
+/* button:focus { */
+/* input:focus, */
+button:focus{
+  outline: none;
+  /* border-color: black; */
+}
+
+input:focus {
+  outline: none;
+  /* border-color: var(--blue-800); */
+  border: 2px solid var(--blue-800);
+  /* border-color: var(--red); */
+  /* box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.25); */
+}
+
+/* button:focus { */
+  /* outline: none; */
+  /* border-color: var(--red); */
+  /* box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.25); */
+/* } */
+
+
+/* input:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+} */
+
+/* =================== */
+
+.form-button{
+    /* padding: var(--spacing-100) var(--spacing-300); */
+    padding: var(--spacing-100) var(--spacing-200);
+    border-radius: var(--spacing-50);
+    border: none;
+    background-color: var(--blue-800);
+    width: 100%;
+
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing);
+    color: var(--white);
+
+    cursor: pointer;
+}
+
+.form-button:hover{
+  
+     /* Fallback solid color for older browsers */
+  background-image: #ff6a3a; 
+
+  /* 1. Define your gradient as a background */
+  background-image: var(--gradient);
+}
+
+/* .form-btn-label{
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing);
+    color: var(--white);
+} */
+
+/* width:100%; */
+
+
+/* success overlay */
+/* Ensure your mobile wrapper behaves nicely */
+/* .mobile-container { */
+
+/*  ? ------ move to top*/
+.main-container {
+  position: relative;
+  width: 100%;
+  max-width: 768px; /* Typical mobile frame width */
+  margin: 0 auto;
+}
+
+
+
