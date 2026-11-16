@@ -364,3 +364,96 @@ input:focus {
   background-image: var(--gradient);
 }
 
+/* Success screen */
+/*  --- see main container  for position relative settings --- */
+
+/* Hidden state for the success screen */
+.success-screen {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff; /* Or your preferred brand color */
+  z-index: 9999;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Active state added via JavaScript */
+.success-screen.active {
+  display: flex; /* Switches to flex to center content */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 149px 24px 0px 24px;
+}
+
+.success-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: var(--spacing-200);
+}
+
+.checkmark{
+  height:64px;
+   width:64px;
+}
+
+.success-title{
+  font-size: var(--font-size-40);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-150);
+  letter-spacing: var(--letter-spacing);
+  color: var(--blue-800);
+  text-align: left;
+}
+
+.success-content p {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-reg);
+  line-height: var(--line-height-150);
+  letter-spacing: var(--letter-spacing);
+  color: var(--blue-800);
+  text-align: left;
+}
+
+.success-content strong {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-150);
+  letter-spacing: var(--letter-spacing);
+  color: var(--blue-800);
+}
+
+.success-btn{
+  padding: var(--spacing-100) var(--spacing-200);
+  border-radius: var(--spacing-50);
+  border: none;
+  background-color: var(--blue-800);
+  width: 100%;
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-150);
+  letter-spacing: var(--letter-spacing);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.success-btn:hover{
+  /* Fallback solid color for older browsers */
+  background-image: #ff6a3a; 
+  /* gradient as a background */
+  background-image: var(--gradient);
+}
+
+
+
+

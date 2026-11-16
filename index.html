@@ -84,7 +84,21 @@
                 </button>
 
             </form>
-        </div>  
+        </div>
+
+         <!-- Full-Screen Success Message (Hidden by default) -->
+  <div id="successView" class="success-screen">
+    <div class="success-content">
+      <img class="checkmark" src="./images/icon-success.svg" alt="">
+      <h1 class="success-title">Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to 
+        <strong id="captured-email">[your email]</strong>
+             Please open it and click the button inside to confirm your subscription
+       </p>
+      <button class="success-btn" onclick="resetForm()">Dismiss message</button>
+    </div>
+  </div>
+  
 
     </main>
 
