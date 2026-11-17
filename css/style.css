@@ -219,7 +219,7 @@ body{
   justify-content: center;
   align-items: center;
   width: 100%;
-  row-gap: var(--spacing-50);
+  row-gap: var(--spacing-150);
 }
 
 .form-label{
@@ -454,6 +454,50 @@ input:focus {
   background-image: var(--gradient);
 }
 
+
+@media screen and (min-width:768px){
+body{
+  /* padding: 73px 80px; */
+  margin: 73px 80px;
+  background-color: var(--blue-700);
+}
+
+.main-container{
+  padding: var(--spacing-250);
+  /* margin:var(--spacing-250); */
+  border-radius: var(--spacing-200);
+  min-height: auto;
+
+  max-width: 904px;
+}
+
+/* ? do I need both aspect ratio's  */
+.hero-image{
+  aspect-ratio: 528/358.29;
+}
+
+.image{
+  aspect-ratio: 528/358.29;
+}
+
+.form-container{
+  align-items: flex-start;
+  padding-left:0 ;
+  padding-right:0 ;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.title{
+  font-size: var(--font-size-56);
+}
+
+.form{
+  row-gap: var(--spacing-100);
+}
+
+
+}
 
 
 
