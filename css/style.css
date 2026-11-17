@@ -123,6 +123,8 @@ body{
   margin: 0 auto;
 }
 
+
+/* no longer used */
 .hero-image{
   aspect-ratio:375/284;
   width: 100%;
@@ -132,6 +134,8 @@ body{
   width: 100%;
 }
 
+
+/* not used */
 .image{
   aspect-ratio:375/284;
   width: 100%;
@@ -457,21 +461,23 @@ input:focus {
 
 @media screen and (min-width:768px){
 body{
-  /* padding: 73px 80px; */
   margin: 73px 80px;
   background-color: var(--blue-700);
 }
 
 .main-container{
   padding: var(--spacing-250);
-  /* margin:var(--spacing-250); */
   border-radius: var(--spacing-200);
   min-height: auto;
-
   max-width: 904px;
+  /* over lay */
+  position: relative; /* Anchors the absolute overlay to this box */
+  width: 100%;
+  max-width: 904px;
+  margin: 0 auto;
+  overflow: hidden; /* Keeps overlay corners matched if you use border-radius */
 }
 
-/* ? do I need both aspect ratio's  */
 .hero-image{
   aspect-ratio: 528/358.29;
 }
@@ -492,12 +498,36 @@ body{
   font-size: var(--font-size-56);
 }
 
+.list{
+  margin-bottom: 0;
+}
+
 .form{
   row-gap: var(--spacing-100);
 }
 
-
+.form-input{
+  height: 56px;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
+.success-screen {
+  display: none;
+   /* Hidden by default */
+  background-color: #ffffff; /* Or your preferred brand color */
+  z-index: 9999;
+  position: absolute;
+  inset: 0; /* Stretches to fill 100% of .main-container's width and height */
+  z-index: 10; /* Ensures it sits above the container's normal content */  
+  
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
 
+}
 
