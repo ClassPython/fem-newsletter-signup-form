@@ -144,10 +144,10 @@ body{
   border-top-right-radius: var(--spacing-50);
 }
 
-.responsive-img {
+/* .responsive-img {
   width: 100%;
   height: auto;
-}
+} */
 
 /*  -----  contains form and list ------  */
 .form-container{
@@ -459,8 +459,9 @@ input:focus {
 }
 
 
-@media screen and (min-width:768px){
-body{
+@media screen and (min-width:48em){
+
+  body{
   margin: 73px 80px;
   background-color: var(--blue-700);
 }
@@ -478,6 +479,7 @@ body{
   overflow: hidden; /* Keeps overlay corners matched if you use border-radius */
 }
 
+/* ? do I need both aspect ratio's  */
 .hero-image{
   aspect-ratio: 528/358.29;
 }
@@ -520,14 +522,49 @@ body{
   z-index: 9999;
   position: absolute;
   inset: 0; /* Stretches to fill 100% of .main-container's width and height */
-  z-index: 10; /* Ensures it sits above the container's normal content */  
-  
+  z-index: 10; /* Ensures it sits above the container's normal content */
+  /* Centering the success content */
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  /* -- */
   width: 100%;
   height: 100%;
 }
 
 }
+
+@media screen and (min-width:90em){
+
+  .main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: var(--spacing-400);
+    max-width: 904px;
+    padding: var(--spacing-200);
+  }
+
+  .image-container{
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .image{
+    aspect-ratio: 400/593;
+  }
+
+  .hero-image{
+    min-width: 400px;
+    height: auto;
+    aspect-ratio: 400/593;
+  }
+
+  .form-container{
+    grid-row: 1;
+    grid-column: 1;
+  }
+}
+
+
 
