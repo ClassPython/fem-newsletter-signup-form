@@ -58,13 +58,18 @@
   --letter-spacing:0rem; /* all */
 
   /* Spacing */
+  --spacing-1675:16.75rem;  /* 268px  16.75 */
+  --spacing-1375:13.75rem;  /* 220px  13.75 */
   --spacing-650:6.5rem;  /* 104px  6.5 */
+  --spacing-500:5rem;  /* 80px 5 */
+  --spacing-456:4.5625rem;  /* 73px 4.5625 */
   --spacing-450:4.5rem;  /* 72px 4.5 */
   --spacing-400:4rem;  /* 64px 4 */
   --spacing-300:3rem;  /* 48px  3*/
   --spacing-250:2.5rem; /* 40px 2.5 */
   --spacing-200:2rem;  /* 32px 2 */
   --spacing-150:1.5rem;/* 24px 1.5 */
+  --spacing-150:1.25rem;/* 20px 1.25 */
   --spacing-112:1.125rem; /* 18px  1.125 */
   --spacing-100:1rem; /* 16px  1 */
   --spacing-50:.5rem; /* 8px  .5 */
@@ -366,7 +371,7 @@ input:focus {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: var(--spacing-125);
   box-sizing: border-box;
 }
 
@@ -446,7 +451,7 @@ input:focus {
 @media screen and (min-width:48em){
 
   body{
-  margin: 73px 80px;
+  margin: var(--spacing-456) var(--spacing-500);
   background-color: var(--blue-700);
 }
 
@@ -514,6 +519,10 @@ input:focus {
 }
 
 @media screen and (min-width:90em){
+
+  body{
+    margin: var(--spacing-1375) var(--spacing-1675);
+  }
 
   .main-container{
     display: grid;
