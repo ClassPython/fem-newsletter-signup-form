@@ -4,11 +4,14 @@ const emailInput = document.getElementById('sign-in-email');
 const errorContainer = document.getElementById('email-error');
 const inputs = document.querySelectorAll('input');
 const forms =document.querySelector(".field-group");
+const successView = document.getElementById('success-view')
+const successHeading0 = document.getElementById('success-heading')
 
 // inert and success 
 const imageContent = document.querySelector('.image-container');
 const formContent = document.querySelector('.form-container');
 const successHeading = document.getElementById('success-heading');
+
 
 
 
