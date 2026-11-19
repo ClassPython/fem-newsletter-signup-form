@@ -16,90 +16,82 @@
 <body>
 
     <main class="main-container">
-
-
+   
         <div class="image-container">
-                      
             <picture>
-  <!-- Desktop: 1440px and up -->
-  <source media="(min-width: 1440px)" srcset="./images/illustration-sign-up-desktop.svg">
-  
-  <!-- Tablet: 768px to 1440px -->
-  <source media="(min-width: 768px)" srcset="./images/illustration-sign-up-tablet.svg">
-  
-  <!-- Mobile (Default fallback): under 768px -->
-  <img src="./images/illustration-sign-up-mobile.svg" alt="Description of the item" class="hero-image">
-</picture>
-
+                <!-- Desktop -->
+                <source media="(min-width: 1440px)" srcset="./images/illustration-sign-up-desktop.svg">
+                
+                <!-- Tablet -->
+                <source media="(min-width: 768px)" srcset="./images/illustration-sign-up-tablet.svg">
+                
+                <!-- Mobile (Default fallback) -->
+                <img src="./images/illustration-sign-up-mobile.svg" alt="Description of the item" class="hero-image">
+            </picture>
         </div>
-     
+        
         <div class="form-container">
             <span class="title">Stay updated!</span>
-
+            
             <p class="description">Join 60,000+ product managers receiving monthly updates on:</p>
-
+            
             <ul class="list">
                 <li class="list-item">Product discovery and building what matters</li>
                 <li class="list-item">Measuring to ensure updates are a success</li>
                 <li class="list-item">And much more!</li>
             </ul>
-
+            
             <form class="form" id="signup-form" novalidate>
-
-
-                <!--?  maybe change to form group -->
-             <div class="field-group">
-
-                 <label class="form-label" for="sign-in-email">
-                    <span class="form-label-title">Email address</span>
-                    <span 
+                    
+                <div class="field-group">
+                    
+                    <label class="form-label" for="sign-in-email">
+                        <span class="form-label-title">Email address</span>
+                        <span 
                         class="error-message"
                         id="email-error"
                         role="alert"
                         hidden
-                        >
-                            Valid email required
-                    </span>
-                </label>
-                                  
-                 <input 
-                 class="form-input"
-                 type="email"  
-                 id="sign-in-email"
-                 name="email"
-                 autocomplete="email"
-                 placeholder="email@company.com"
-                 aria-invalid="true"
-                 aria-required="true"
-                 aria-describedby="email-error"
-                 required 
-                 />
-                 
+                        >Valid email required
+                        </span>
+                    </label>
+                
+                    <input 
+                        class="form-input"
+                        type="email"  
+                        id="sign-in-email"
+                        name="email"
+                        autocomplete="email"
+                        placeholder="email@company.com"
+                        aria-invalid="true"
+                        aria-required="true"
+                        aria-describedby="email-error"
+                        required 
+                    />
+                
                 </div>
-
+            
                 <button class="form-button" type="submit">
                     Subscribe to monthly newsletter
                 </button>
-
+                
             </form>
         </div>
-
+        
          <!-- Success Message (Hidden by default) -->
-  <div id="successView" class="success-screen">
-    <div class="success-content">
-      <img class="checkmark" src="./images/icon-success.svg" alt="">
-      <h1 class="success-title">Thanks for subscribing!</h1>
-      <p>A confirmation email has been sent to 
-        <strong id="captured-email">[your email]</strong>
-             Please open it and click the button inside to confirm your subscription
-       </p>
-      <button class="success-btn" onclick="resetForm()">Dismiss message</button>
-    </div>
-  </div>
+        <div id="successView" class="success-screen">
+            <div class="success-content">
+                <img class="checkmark" src="./images/icon-success.svg" alt="">
+                <h1 id="success-heading" class="success-title">Thanks for subscribing!</h1>
+                <p>A confirmation email has been sent to 
+                <strong id="captured-email">[your email]</strong>
+                Please open it and click the button inside to confirm your subscription
+                </p>
+                <button class="success-btn" type="button" onclick="resetForm()">Dismiss message</button>
+            </div>
+        </div>
   
-
-    </main>
-
-     
+</main>
+   
 </body>
 </html>
