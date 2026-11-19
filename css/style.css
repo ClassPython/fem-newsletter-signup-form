@@ -123,8 +123,7 @@ body{
   margin: 0 auto;
 }
 
-
-/* no longer used */
+/* is used */
 .hero-image{
   aspect-ratio:375/284;
   width: 100%;
@@ -133,21 +132,6 @@ body{
 .image-container{
   width: 100%;
 }
-
-
-/* not used */
-.image{
-  aspect-ratio:375/284;
-  width: 100%;
-  height: 100%;
-  border-top-left-radius: var(--spacing-50);
-  border-top-right-radius: var(--spacing-50);
-}
-
-/* .responsive-img {
-  width: 100%;
-  height: auto;
-} */
 
 /*  -----  contains form and list ------  */
 .form-container{
@@ -312,7 +296,6 @@ body{
   display: none;
 }
 
-
 /* --- customize auto settings on input field */
 
 /* -- autofill input field --- */
@@ -323,9 +306,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
   /* Paint over the browser's default background using a large inset shadow */
-  /* -webkit-box-shadow: 0 0 0 1000px #1e293b inset !important; */
   -webkit-box-shadow: 0 0 0 1000px var(--white) inset !important;
-  /* box-shadow: 0 0 0 1000px #1e293b inset !important; */
   box-shadow: 0 0 0 1000px var(--white) inset !important;
   /* Set the autofill text and cursor colors */
   -webkit-text-fill-color: black  !important;
@@ -334,7 +315,7 @@ input:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-  /* Keep floating labels raised when the input is autofilled */
+  /* Keep floating labels raised when the input is autofill */
 button:focus{
   outline: none;
 }
@@ -369,7 +350,7 @@ input:focus {
 }
 
 /* Success screen */
-/*  --- see main container  for position relative settings --- */
+/* --see main container for position relative settings --*/
 
 /* Hidden state for the success screen */
 .success-screen {
@@ -379,7 +360,7 @@ input:focus {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #ffffff; /* Or your preferred brand color */
+  background-color: #ffffff;
   z-index: 9999;
   flex-direction: column;
   justify-content: center;
@@ -458,6 +439,10 @@ input:focus {
   background-image: var(--gradient);
 }
 
+#success-heading:focus{
+  outline: none;
+}
+
 
 @media screen and (min-width:48em){
 
@@ -479,12 +464,7 @@ input:focus {
   overflow: hidden; /* Keeps overlay corners matched if you use border-radius */
 }
 
-/* ? do I need both aspect ratio's  */
 .hero-image{
-  aspect-ratio: 528/358.29;
-}
-
-.image{
   aspect-ratio: 528/358.29;
 }
 
@@ -518,7 +498,7 @@ input:focus {
 .success-screen {
   display: none;
    /* Hidden by default */
-  background-color: #ffffff; /* Or your preferred brand color */
+  background-color: #ffffff; 
   z-index: 9999;
   position: absolute;
   inset: 0; /* Stretches to fill 100% of .main-container's width and height */
@@ -548,10 +528,6 @@ input:focus {
   .image-container{
     grid-row: 1;
     grid-column: 2;
-  }
-
-  .image{
-    aspect-ratio: 400/593;
   }
 
   .hero-image{
