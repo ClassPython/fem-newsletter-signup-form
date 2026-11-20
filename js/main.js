@@ -6,6 +6,7 @@ const inputs = document.querySelectorAll('input');
 const forms =document.querySelector(".field-group");
 const successView = document.getElementById('success-view');
 const successHeading = document.getElementById('success-heading');
+const successButton = document.querySelector('.success-btn')
 
 // inert and success 
 const imageContent = document.querySelector('.image-container');
@@ -65,7 +66,7 @@ function validateEmail() {
 // Fires when submit button clicked
 // calls validEmail function
 
-// remove / ensure any has-error message/settings removes
+// remove / ensure any has-error message/settings
 // capture email input and add to success page message
 document.getElementById('signup-form').addEventListener('submit', function (e) {
  
@@ -91,10 +92,11 @@ emailInput.blur();
 // Fires when "dismiss" is clicked on success page
 // Hide success message & restore background
 // removes inerts so screen reader can read main page
-function resetForm() {
+successButton.addEventListener('click', function() {
+// function resetForm() {
   formInput.reset();
   successView.classList.remove('active');
   imageContent.inert = false;
   formContent.inert = false;
-}
+})
 
