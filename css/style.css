@@ -320,11 +320,7 @@ input:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-  /* Keep floating labels raised when the input is autofill */
-button:focus{
-  outline: none;
-}
-
+ 
 input:focus {
   outline: none;
   border: 2px solid var(--blue-800);
