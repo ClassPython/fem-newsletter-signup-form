@@ -80,25 +80,6 @@ html, body {
   padding: 0;
 }
 
-.text-gradient {
-  /* Fallback solid color for older browsers */
-  color: #ff6a3a; 
-
-  /* 1. Define your gradient as a background */
-  background-image: var(--gradient);
-
-  /* 2. Clip the background to the text shape */
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  /* 3. Make the actual text fill transparent so the background shows through */
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  
-  /* Optional: Prevents the gradient from stretching across empty container space */
-  display: inline-block; 
-}
-
 body{
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
