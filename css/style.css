@@ -345,7 +345,7 @@ input:focus {
 
 .form-button:hover{
    /* Fallback solid color for older browsers */
-  background-image: #ff6a3a; 
+  background-color: #ff6a3a; 
   /* customized gradient background */
   background-image: var(--gradient);
 }
@@ -434,7 +434,7 @@ input:focus {
 
 .success-btn:hover{
   /* Fallback solid color for older browsers */
-  background-image: #ff6a3a; 
+  background-color: #ff6a3a; 
   /* gradient as a background */
   background-image: var(--gradient);
 }
