@@ -19,6 +19,7 @@ const formContent = document.querySelector('.form-container');
 inputs.forEach((input) => {
   input.addEventListener('input', () => {
   forms.classList.remove('has-error');
+  emailInput.focus();
   });
 });
 
@@ -75,7 +76,6 @@ const isEmailValid = validateEmail();
   if (!isEmailValid) {
     emailInput.focus();
   } else{
-    successHeading.focus();
       const usernameValue = e.target.elements.email.value;
        // Inject it into the span inside the sentence
       displayStrong.textContent = usernameValue;
@@ -96,7 +96,9 @@ successButton.addEventListener('click', function() {
 // function resetForm() {
   formInput.reset();
   successView.classList.remove('active');
+
   imageContent.inert = false;
   formContent.inert = false;
+  emailInput.focus();
 })
 
