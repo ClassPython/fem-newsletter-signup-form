@@ -88,9 +88,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* --- */
   background-color: var(--blue-700);
-  /*  --  */
    margin: 0; /* prevents a default body margin*/
 }
 
@@ -102,11 +100,8 @@ body{
   row-gap: var(--spacing-250);
   min-height: 100vh; 
   min-height: 100dvh; 
-  /* Optional: allows vertical centering across the whole screen */
   background-color: var(--white);
 
-  /* for success screen */
-  /* position: relative; */
   width: 100%;
   max-width: 768px; /*max width of mobile screen*/
   margin: 0 auto;
@@ -116,7 +111,6 @@ body{
   display: none;
 }
 
-/* is used */
 .hero-image{
   aspect-ratio:375/284;
   width: 100%;
@@ -126,7 +120,7 @@ body{
   width: 100%;
 }
 
-/*  -----  contains form and list ------  */
+/*  -----  contains form and list styles ------  */
 .form-container{
   display: flex;
   flex-direction: column;
@@ -307,16 +301,13 @@ input:-webkit-autofill:focus {
   /* Prevent brief flashes of the default yellow/blue color */
   transition: background-color 5000s ease-in-out 0s;
 }
-
  
 input:focus {
   outline: none;
   border: 2px solid var(--blue-800);
 }
 
-
 /* --- form button for submit --- */
-
 .form-button{
   padding: var(--spacing-100) var(--spacing-200);
   border-radius: var(--spacing-50);
@@ -344,21 +335,7 @@ input:focus {
 /* Hidden state for the success screen */
 .success-screen {
   display: none; 
-  /* Hidden by default */
-  /* position: fixed; */
-  /* top: 0; */
-  /* left: 0; */
-  /* width: 100vw; */
-  /* height: 100vh; */
-  /* background-color: #ffffff; */
-  /* z-index: 9999; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* text-align: center; */
-  /* padding: var(--spacing-125); */
   padding: 149px 24px 70px 24px;
-  /* box-sizing: border-box; */
   min-height: 100vh;
   max-width: 375px;
   justify-self: center;
@@ -374,10 +351,6 @@ input:focus {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  /* use align-self and justify self */
-  /* maybe use min width and min height */
-  /* dont; need absolute in main anymore */
-  /* max-height: 842px; */
 }
 
 .success-content{
@@ -459,13 +432,10 @@ input:focus {
   border-radius: var(--spacing-200);
   min-height: auto;
   max-width: 904px;
-  /* over lay */
-  /* position: relative; */
-   /* Anchors the absolute overlay to this box */
   width: 100%;
   max-width: 904px;
   margin: 0 auto;
-  overflow: hidden; /* Keeps overlay corners matched if you use border-radius */
+  overflow: hidden; /* Keeps overlay corners matched for border-radius */
 }
 
 .hero-image{
@@ -501,12 +471,10 @@ input:focus {
 
 .success-screen{
   max-width: 504px;
-  /* max-height: 520px; */
   width: 100%;
   min-height: 0;
   border-radius: 36px;
   padding: var(--spacing-400);
-
 }
 
 .success-content{
@@ -521,30 +489,6 @@ input:focus {
 .success-btn{
   margin-top: 0;
 }
-
-/* .success-screen[open]{
-
-} */
-
-/* .success-screen { */
-  /* display: none; */
-   /* Hidden by default */
-  /* background-color: #ffffff;  */
-  /* z-index: 9999; */
-  /* position: absolute; */
-  /* inset: 0;  */
-  /* Stretches to fill 100% of .main-container's width and height */
-  /* z-index: 10; */
-   /* Ensures it sits above the container's normal content */
-  /* Centering the success content */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* flex-direction: column; */
-  /* -- */
-  /* height: 100%; */
-/* } */
-
-
 
 }
 
