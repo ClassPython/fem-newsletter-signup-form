@@ -8,6 +8,9 @@ const successView = document.getElementById('success-view');
 const successHeading = document.getElementById('success-heading');
 const successButton = document.querySelector('.success-btn')
 
+//  modal
+const main = document.querySelector('.main-container');
+
 // inert and success 
 const imageContent = document.querySelector('.image-container');
 const formContent = document.querySelector('.form-container');
@@ -37,14 +40,18 @@ function validateEmail() {
     errorContainer.textContent = '';
     errorContainer.hidden = true;
     // ------------
+    // successView.classList.add('active');
+    //  modal section
+    main.hidden = true;
+
+    successView.showModal()
+    forms.classList.remove('has-error');
     // Freeze background interaction & screen reader access
-      imageContent.inert = true;
-      formContent.inert = true;
-
-      successView.classList.add('active');
-      successHeading.focus();
-      forms.classList.remove('has-error');
-
+    
+    // imageContent.inert = true;
+    // formContent.inert = true;
+    console.log('focus');
+    successHeading.focus();
     // -------------
     return true;
   }
@@ -79,6 +86,7 @@ const isEmailValid = validateEmail();
       const usernameValue = e.target.elements.email.value;
        // Inject it into the span inside the sentence
       displayStrong.textContent = usernameValue;
+      console.log('is valid')
 
   }
 });
@@ -95,10 +103,11 @@ emailInput.blur();
 successButton.addEventListener('click', function() {
 // function resetForm() {
   formInput.reset();
-  successView.classList.remove('active');
-
-  imageContent.inert = false;
-  formContent.inert = false;
+  // successView.classList.remove('active');
+  successView.close()
+   main.hidden = false;
+  // imageContent.inert = false;
+  // formContent.inert = false;
   emailInput.focus();
 })
 
