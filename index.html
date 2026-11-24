@@ -78,8 +78,11 @@
             </form>
         </div>
         
-         <!-- Success Message (Hidden by default) -->
-        <div id="success-view" class="success-screen">
+        
+    </main>
+    
+            <!-- Success Message (Hidden by default) -->
+        <dialog id="success-view" class="success-screen">
             <div class="success-content">
                 <img class="checkmark" src="./images/icon-success.svg" alt="">
                 <h1 id="success-heading" role="status" class="success-title" tabindex="-1">Thanks for subscribing!</h1>
@@ -87,11 +90,8 @@
                 <strong id="captured-email">[your email]</strong>
                 Please open it and click the button inside to confirm your subscription
                 </p>
-                <button class="success-btn" type="button">Dismiss message</button>
+                    <button class="success-btn" type="button">Dismiss message</button>
             </div>
-        </div>
-  
-</main>
-   
+        </dialog>
 </body>
 </html>
