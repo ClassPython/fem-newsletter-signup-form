@@ -345,7 +345,6 @@ input:focus {
 }
 
 /* Active state added via JavaScript */
-/* .success-screen.active { */
 .success-screen[open] {
   display: flex; /* Switches to flex to center content */
   flex-direction: column;
